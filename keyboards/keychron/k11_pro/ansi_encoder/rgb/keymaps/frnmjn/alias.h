@@ -1,0 +1,77 @@
+#define ALT KC_LALT
+#define AMPR IT_AMPR
+#define ASTR IT_ASTR
+#define BSPC KC_BSPC
+#define BSLS IT_BSLS
+#define BT BT_HST1
+#define CBC IT_RCBR
+#define CIRC IT_CIRC
+#define CMD KC_LCMD
+#define COLN IT_COLN
+#define COMM IT_COMM
+#define COPY LCMD(KC_C)
+#define CTL KC_LCTL
+#define CUT LCMD(KC_X)
+#define DEL KC_DEL
+#define DLR IT_DLR
+#define DOT IT_DOT
+#define DQT IT_DQUO
+#define END LCMD(KC_RIGHT)
+#define ENT KC_ENT
+#define ESC KC_ESC
+#define EQL IT_EQL
+#define EXLM IT_EXLM
+#define GONOR LT(NOR, SPC)
+#define GONUM MO(NUM)
+#define GRV IT_GRV
+#define HOME LCMD(KC_LEFT)
+#define HR_1 LCMD_T(KC_A)
+#define HR_10 RCMD_T(SCLN)
+#define HR_2 RALT_T(KC_S)
+#define HR_3 LCTL_T(KC_D)
+#define HR_4 LSFT_T(KC_F)
+#define HR_7 RSFT_T(KC_J)
+#define HR_8 RCTL_T(KC_K)
+#define HR_9 RALT_T(KC_L)
+#define MINS IT_MINS
+#define NO KC_NO
+#define PASTE LCMD(KC_V)
+#define PERC IT_PERC
+#define PGDN KC_PGDN
+#define PGUP KC_PGUP
+#define PIPE IT_PIPE
+#define PLUS IT_PLUS
+#define QUOT IT_QUOT
+#define RBC IT_RPRN
+#define REDO SCMD(KC_Z)
+#define SBC IT_RBRC
+#define SCLN IT_SCLN
+#define SFT KC_LSFT
+#define SLSH IT_SLSH
+#define SPC KC_SPC
+#define SRC LCTL(KC_R)
+#define TAB KC_TAB
+#define T_CB TD(TD_CB)
+#define T_DQT TD(TD_DQT)
+#define T_E TD(TD_E)
+#define T_HOME TD(TD_HOME)
+#define T_PERC TD(TD_PERC)
+#define T_PIPE TD(TD_PIPE)
+#define T_QT TD(TD_QT)
+#define T_RB TD(TD_RB)
+#define T_SB TD(TD_SB)
+#define T_SLSH TD(TD_SLSH)
+#define TRNS KC_TRNS
+#define UNDO LCMD(KC_Z)
+#define UNDS IT_UNDS
+#define _DN KC_DOWN
+#define _DX KC_RIGHT
+#define _MEH KC_MEH
+#define _SX KC_LEFT
+#define _UP KC_UP
+
+enum layers {
+    INS,
+    NOR,
+    NUM,
+};
