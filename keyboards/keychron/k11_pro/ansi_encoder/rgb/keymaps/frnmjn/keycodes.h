@@ -26,9 +26,6 @@
 #define _EXLM KC_EXLM
 #define _GRV KC_GRV
 #define _HASH KC_HASH
-#define _LPRN KC_LPRN
-#define _LBRC KC_LBRC
-#define _LCBR KC_LCBR
 #define _HOME LCMD(KC_LEFT)
 #define _HR_0 LCMD_T(KC_A)
 #define _HR_1 RALT_T(KC_S)
@@ -39,6 +36,9 @@
 #define _HR_8 RALT_T(KC_L)
 #define _HR_9 RCMD_T(_SCLN)
 #define _KC_RABK KC_RABK
+#define _LBRC KC_LBRC
+#define _LCBR KC_LCBR
+#define _LPRN KC_LPRN
 #define _MEH KC_MEH
 #define _MEH_A MEH(KC_A)
 #define _MEH_D MEH(KC_D)
@@ -51,6 +51,8 @@
 #define _MEH_T MEH(KC_T)
 #define _MEH_T MEH(KC_T)
 #define _MEH_W MEH(KC_W)
+#define _MEH_X MEH(KC_X)
+#define _MEH_Z MEH(KC_Z)
 #define _MINS KC_MINS
 #define _MIX MO(MIX)
 #define _NO KC_NO

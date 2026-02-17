@@ -1,4 +1,5 @@
 // clang-format off
+#include "password.h"
 enum combos{
   C_TAB,
   C_ENTER,
@@ -24,6 +25,7 @@ enum combos{
   C_SB,
   C_F5,
   C_F12,
+  C_PWD,
   COMBO_LENGTH
 };
 
@@ -50,8 +52,6 @@ const uint16_t PROGMEM c_quot[]     = {KC_M, _COMM, COMBO_END};
 const uint16_t PROGMEM c_rb[]       = {KC_U, _HR_6, COMBO_END};
 const uint16_t PROGMEM c_cb[]       = {KC_I, _HR_7, COMBO_END};
 const uint16_t PROGMEM c_sb[]       = {KC_O, _HR_8, COMBO_END};
-const uint16_t PROGMEM c_f5[]       = {_HR_0, _HR_1, _HR_2, _HR_3, COMBO_END};
-const uint16_t PROGMEM c_f12[]      = {_HR_6, _HR_7, _HR_8, _HR_9, COMBO_END};
 
 combo_t key_combos[] = {
   [C_TAB]     = COMBO(c_tab, _TAB),
@@ -75,8 +75,7 @@ combo_t key_combos[] = {
   [C_RB]      = COMBO(c_rb, _LPRN),
   [C_CB]      = COMBO(c_cb, _LCBR),
   [C_SB]      = COMBO(c_sb, _LBRC),
-  [C_F5]      = COMBO(c_f5, KC_F5),
-  [C_F12]     = COMBO(c_f12, KC_F12),
+  [C_PWD]     = COMBO_ACTION(c_pwd),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
@@ -113,6 +112,11 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     case C_SAD:
       if (pressed) {
 		    SEND_STRING(":-(");
+      }
+      break;
+    case C_PWD:
+      if (pressed) {
+		    SEND_STRING(PASSWORD);
       }
       break;
   }
