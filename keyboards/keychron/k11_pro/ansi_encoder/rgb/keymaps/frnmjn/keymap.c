@@ -37,11 +37,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _NO,   _NO,     _NO,     _NO,     _NO,     _NO,     _NO,     _NO,     _NO,     _NO,     _NO,      _NO,      _NO,      _NO,      _NO,
         _NO,   _MEH_Q,  _MEH_W,  _MEH_E,  _MEH_R,  _MEH_T,           _NO,     _NO,     _NO,     _NO,      _NO,      _NO,      _NO,      _NO,      _NO,
         _NO,   _MEH_A,  _MEH_S,  _MEH_D,  _MEH_F,  _MEH_G,           _NO,     _NO,     _NO,     _NO,      _NO,      _NO,      _NO,      _NO,
-        _NO,   _MEH_Z,  _MEH_X,  _NO,     _NO,     _NO,     _NO,     _NO,     _NO,     _NO,     _NO,      _NO,      _NO,      _NO,
+        _NO,   _MEH_Z,  _MEH_X,  _MEH_C,  _MEH_V,  _NO,     _NO,     _NO,     _NO,     _NO,     _NO,      _NO,      _NO,      _NO,
         _NO,   _NO,     _NO,     _NO,              _NO,     _NO,     _NO,     _NO,     _NO,     _NO,      _NO
 ),
 };
 // clang-format on
-
-
-

@@ -3,7 +3,6 @@
 enum combos{
   C_TAB,
   C_ENTER,
-  C_ESC,
   C_PIPE,
   C_CW_TOGG,
   C_DCOLN,
@@ -23,8 +22,6 @@ enum combos{
   C_RB,
   C_CB,
   C_SB,
-  C_F5,
-  C_F12,
   C_PWD,
   COMBO_LENGTH
 };
