@@ -42,6 +42,7 @@
 #define _MEH_Z MEH(KC_Z)
 #define _MEH_C MEH(KC_C)
 #define _MEH_V MEH(KC_V)
+#define _MEH_B MEH(KC_B)
 #define _MINS KC_MINS
 #define _NO KC_NO
 #define _NOR LT(NAV, _SPC)
