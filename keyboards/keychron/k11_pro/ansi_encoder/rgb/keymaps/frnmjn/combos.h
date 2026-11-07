@@ -23,6 +23,8 @@ enum combos{
   C_CB,
   C_SB,
   C_PWD,
+  C_BT1,
+  C_BT2,
   COMBO_LENGTH
 };
 
@@ -49,6 +51,9 @@ const uint16_t PROGMEM c_quot[]     = {KC_M, _COMM, COMBO_END};
 const uint16_t PROGMEM c_rb[]       = {KC_U, _HR_6, COMBO_END};
 const uint16_t PROGMEM c_cb[]       = {KC_I, _HR_7, COMBO_END};
 const uint16_t PROGMEM c_sb[]       = {KC_O, _HR_8, COMBO_END};
+// Bluetooth: tap = switch host, hold 2s = pair that host
+const uint16_t PROGMEM c_bt1[]      = {KC_Q, KC_W, KC_E, KC_R, COMBO_END};
+const uint16_t PROGMEM c_bt2[]      = {KC_U, KC_I, KC_O, KC_P, COMBO_END};
 
 combo_t key_combos[] = {
   [C_TAB]     = COMBO(c_tab, _TAB),
@@ -73,6 +78,8 @@ combo_t key_combos[] = {
   [C_CB]      = COMBO(c_cb, _LCBR),
   [C_SB]      = COMBO(c_sb, _LBRC),
   [C_PWD]     = COMBO_ACTION(c_pwd),
+  [C_BT1]     = COMBO(c_bt1, BT_HST1),
+  [C_BT2]     = COMBO(c_bt2, BT_HST2),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {

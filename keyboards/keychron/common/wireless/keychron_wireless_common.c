@@ -34,8 +34,6 @@ static uint32_t pairing_key_timer;
 static uint8_t  host_idx = 0;
 
 bool process_record_keychron_wireless(uint16_t keycode, keyrecord_t *record) {
-    static uint8_t host_idx;
-
     switch (keycode) {
         case BT_HST1 ... BT_HST3:
             if (get_transport() == TRANSPORT_BLUETOOTH) {
