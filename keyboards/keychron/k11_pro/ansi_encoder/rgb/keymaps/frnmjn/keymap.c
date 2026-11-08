@@ -42,3 +42,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 };
 // clang-format on
+
+// Keep the per-key RGB backlight off. Saved to EEPROM so it stays off
+// after Bluetooth/battery indicators finish (they reload the EEPROM state).
+void keyboard_post_init_user(void) {
+    if (rgb_matrix_is_enabled()) {
+        rgb_matrix_disable();
+    }
+}
+
+#ifdef KC_BLUETOOTH_ENABLE
+#    include "transport.h"
+#    include "bluetooth.h"
+#endif
+
+// Mac/Win slide switch: switch Bluetooth host instead of default layer.
+// Mac side = host 1, Win side = host 2.
+bool dip_switch_update_user(uint8_t index, bool active) {
+    // The keyboard code already changed the default layer: put it back.
+    default_layer_set(1UL << DEF);
+#ifdef KC_BLUETOOTH_ENABLE
+    if (index == 0 && get_transport() == TRANSPORT_BLUETOOTH) {
+        bluetooth_connect_ex(active ? 1 : 2, 0);
+    }
+#endif
+    return true;
+}
